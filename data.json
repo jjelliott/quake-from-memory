@@ -1,8 +1,194 @@
 [
-  {
-    "map": "start",
-    "user": "iLike80sRock",
-    "claimedOn": "n/a",
-    "complete": false
-  }
+    {
+        "map": "start",
+        "user": "iLike80sRock",
+        "claimedOn": "n/a",
+        "complete": false
+    },
+    {
+        "map": "e1m1",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e1m2",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e1m3",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e1m4",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e1m5",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e1m6",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e1m7",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e1m8",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e2m1",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e2m2",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e2m3",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e2m4",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e2m5",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e2m6",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e2m7",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e3m1",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e3m2",
+        "user": "iLike80sRock",
+        "claimedOn": "n/a",
+        "complete": false
+    },
+    {
+        "map": "e3m3",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e3m4",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e3m5",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e3m6",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e3m7",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e4m1",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e4m2",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e4m3",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e4m4",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e4m5",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e4m6",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e4m7",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "e4m8",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    },
+    {
+        "map": "end",
+        "user": null,
+        "claimedOn": null,
+        "complete": false
+    }
 ]
