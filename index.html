@@ -17,10 +17,11 @@
 <script>
 fetch("data.json").then(res => res.json()).then(json => {
 	let elements = [];
-	for(let row in json) {
-
-	}
-	document.querySelector("tbody").innerHTML = elements.join("");
+	json.forEach(row => {
+        let tableRow = `<tr><td>${row.map}</td><td>${row.user}</td><td>${row.claimedOn}</td><td>${row.complete ? "Yes" : "No"}</td></tr>`;
+        elements.push( tableRow);
+	})
+	document.querySelector("tbody").innerHTML = elements.reduce((acc, next) => acc + next, "");
 });
 </script>
 </body>
