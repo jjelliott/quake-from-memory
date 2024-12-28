@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<title>Quake from Memory Jam</title>
+<body>
+
+<table>
+<thead>
+<tr>
+<th>Map</th>
+<th>User</th>
+<th>Claimed on</th>
+<th>Complete?</th>
+</thead>
+<tbody>
+</tbody>
+<script>
+fetch("data.json").then(res => res.json()).then(json => {
+	let elements = [];
+	for(let row in json) {
+
+	}
+	document.querySelector("tbody").innerHTML = elements.join("");
+});
+</script>
+</body>
+
+</html>
