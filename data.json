@@ -45,7 +45,7 @@
         "map": "e1m7",
         "user": "Chuma",
         "claimedOn": "2024-12-29",
-        "complete": false
+        "complete": true
     },
     {
         "map": "e1m8",
@@ -187,8 +187,8 @@
     },
     {
         "map": "end",
-        "user": null,
-        "claimedOn": null,
-        "complete": false
+        "user": "Chuma",
+        "claimedOn": "2024-12-31",
+        "complete": true
     }
 ]
