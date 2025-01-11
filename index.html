@@ -6,6 +6,7 @@
 </head>
 <body>
 <div class="container">
+	<div id="stats"></div>
 <table class="table">
 <thead>
 <tr>
@@ -25,6 +26,7 @@ fetch("data.json").then(res => res.json()).then(json => {
         let tableRow = `<tr><td>${row.map}</td><td>${row.user || "Unclaimed"}</td><td>${row.claimedOn || ""}</td><td>${row.complete ? "Yes" : "No"}</td></tr>`;
         elements.push( tableRow);
 	})
+	document.querySelector("#stats").innerHTML = `<p>Claimed: ${json.reduce((acc, next) => next.user ? acc +1 : acc, 0)}</p><p>Finished: ${json.reduce((acc, next) => next.complete ? acc +1 : acc, 0)}</p>`;
 	document.querySelector("tbody").innerHTML = elements.reduce((acc, next) => acc + next, "");
 });
 </script>
