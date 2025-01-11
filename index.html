@@ -6,6 +6,7 @@
 </head>
 <body>
 <div class="container">
+	<h1>Quake from Memory Jam</h1>
 	<div id="stats"></div>
 <table class="table">
 <thead>
@@ -21,12 +22,13 @@
 </div>
 <script>
 fetch("data.json").then(res => res.json()).then(json => {
+	let totalMaps = json.length;
 	let elements = [];
 	json.forEach(row => {
         let tableRow = `<tr><td>${row.map}</td><td>${row.user || "Unclaimed"}</td><td>${row.claimedOn || ""}</td><td>${row.complete ? "Yes" : "No"}</td></tr>`;
         elements.push( tableRow);
 	})
-	document.querySelector("#stats").innerHTML = `<p>Claimed: ${json.reduce((acc, next) => next.user ? acc +1 : acc, 0)}</p><p>Finished: ${json.reduce((acc, next) => next.complete ? acc +1 : acc, 0)}</p>`;
+	document.querySelector("#stats").innerHTML = `<h2>Overall counts</h2><p>Claimed: ${json.reduce((acc, next) => next.user ? acc +1 : acc, 0)} / ${totalMaps}</p><p>Finished: ${json.reduce((acc, next) => next.complete ? acc +1 : acc, 0)} / ${totalMaps}</p>`;
 	document.querySelector("tbody").innerHTML = elements.reduce((acc, next) => acc + next, "");
 });
 </script>
