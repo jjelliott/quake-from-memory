@@ -39,7 +39,7 @@
         "map": "e1m6",
         "user": "Atom1K",
         "claimedOn": "2024-12-29",
-        "complete": false
+        "complete": true
     },
     {
         "map": "e1m7",
@@ -93,7 +93,7 @@
         "map": "e2m7",
         "user": "Text_Fish",
         "claimedOn": "2024-12-29",
-        "complete": false
+        "complete": true
     },
     {
         "map": "e3m1",
@@ -127,8 +127,8 @@
     },
     {
         "map": "e3m6",
-        "user": null,
-        "claimedOn": null,
+        "user": "Atom1K",
+        "claimedOn": "2025-01-10",
         "complete": false
     },
     {
