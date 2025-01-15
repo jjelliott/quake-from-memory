@@ -9,7 +9,7 @@
         "map": "e1m1",
         "user": "rabbit",
         "claimedOn": "2024-12-18",
-        "complete": false
+        "complete": true
     },
     {
         "map": "e1m2",
@@ -147,7 +147,7 @@
         "map": "e4m2",
         "user": "shark",
         "claimedOn": "2024-12-29",
-        "complete": false
+        "complete": true
     },
     {
         "map": "e4m3",
