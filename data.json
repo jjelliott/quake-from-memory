@@ -27,7 +27,7 @@
         "map": "e1m4",
         "user": "CommonCold",
         "claimedOn": "2024-12-28",
-        "complete": false
+        "complete": true
     },
     {
         "map": "e1m5",
@@ -49,8 +49,8 @@
     },
     {
         "map": "e1m8",
-        "user": null,
-        "claimedOn": null,
+        "user": "gnemeth",
+        "claimedOn": "2025-01-19",
         "complete": false
     },
     {
