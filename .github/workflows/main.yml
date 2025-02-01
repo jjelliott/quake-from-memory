@@ -8,6 +8,8 @@ jobs:
     name: Create release files
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout
+      uses: actions/checkout@v4.2.2
     - name: Copy files
       run: |
         mkdir -p build/id1ver/maps
