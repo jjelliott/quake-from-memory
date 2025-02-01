@@ -1,0 +1,25 @@
+on:
+  push:
+    branches:
+    - main
+    - v*
+jobs:
+  create-release:
+    name: Create release files
+    runs-on: ubuntu-latest
+    steps:
+    - name: Copy files
+      run: |
+        mkdir -p build/id1ver/maps
+        cp id1ver/* build/id1ver/maps/
+        cp progs.dat build/id1ver/
+        cp qfm-jam-readme.txt build/id1ver/
+        cp -r srcrdme build/id1ver/
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4.6.0
+      with:
+    # Artifact name
+        name: qfmjam-${{ github.ref_name }}
+    # A file, directory or wildcard pattern that describes what to upload
+        path: build/id1ver/*
+    # The desired behavior if no files are found using the provided path.
