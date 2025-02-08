@@ -21,7 +21,7 @@
         "map": "e1m3",
         "user": "ChadQuad",
         "claimedOn": "2024-12-29",
-        "complete": false
+        "complete": true
     },
     {
         "map": "e1m4",
@@ -51,7 +51,7 @@
         "map": "e1m8",
         "user": "gnemeth",
         "claimedOn": "2025-01-19",
-        "complete": false
+        "complete": true
     },
     {
         "map": "e2m1",
