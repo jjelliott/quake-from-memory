@@ -20,6 +20,7 @@ jobs:
       run: |
         mkdir -p build/id1ver/maps
         cp id1ver/* build/id1ver/maps/
+        cp demo* build/id1ver/
         cp quake.rc build/id1ver/
         cp progs.dat build/id1ver/
         cp qfm-jam-readme.txt build/id1ver/
@@ -27,11 +28,12 @@ jobs:
     - name: Make paks
       run: |
         cd build/id1ver
-        pak pak0.pak maps/e1* maps/start.bsp progs.dat quake.rc
+        pak pak0.pak maps/e1* maps/start.bsp progs.dat quake.rc demo*
         sed -i.bak '/scratch4 1/d' ./quake.rc
         pak pak1.pak maps/e2* maps/e3* maps/e4* maps/end.bsp quake.rc
         rm quake.rc
         rm quake.rc.bak
+        rm demo*
         rm -r maps/
         rm progs.dat
     - name: Upload a Build Artifact
