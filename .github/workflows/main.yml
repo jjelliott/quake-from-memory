@@ -10,6 +10,9 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4.2.2
+    - uses: parafoxia/pip-install@v1
+      with:
+        packages: quake-cli-tools
     - name: Copy files
       run: |
         mkdir -p build/id1ver/maps
@@ -17,6 +20,12 @@ jobs:
         cp progs.dat build/id1ver/
         cp qfm-jam-readme.txt build/id1ver/
         cp -r srcrdme build/id1ver/
+    - name: Make paks
+      run: |
+        cd build/id1ver
+        pak pak0.pak maps/ progs.dat
+        rm -r maps/
+        rm progs.dat
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4.6.0
       with:
