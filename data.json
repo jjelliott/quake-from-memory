@@ -109,8 +109,8 @@
     },
     {
         "map": "e3m3",
-        "user": null,
-        "claimedOn": null,
+        "user": "NewHouse",
+        "claimedOn": "2025-02-07",
         "complete": false
     },
     {
