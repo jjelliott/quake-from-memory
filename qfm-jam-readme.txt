@@ -25,14 +25,18 @@ Credits:
 iLike80sRock: Organizer, start, e3m2, e4m5
 rabbit: e1m1
 Avix: e1m2
+ChadQuad: e1m3
 CommonCold: e1m4
 Raton: e1m5
 Atom1K: e1m6, e3m6
 Chuma: e1m7, end
+gnemeth: e1m8
+Niccolicious: e2m4
 Text_Fish: e2m7
 RecycledOJ: e3m1
 ZungryWare: e4m1
 shark: e4m2
+NewHouse: e4m3
 
 
 Original Jam Prompt:
