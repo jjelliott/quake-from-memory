@@ -221,133 +221,133 @@
 {
 "classname" "light"
 "origin" "464 -2352 56"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
 "classname" "light"
 "origin" "464 -2352 128"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
 "classname" "light"
 "origin" "464 -2352 200"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
 "classname" "light"
 "origin" "464 -2352 272"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
 "classname" "light"
 "origin" "464 -2512 56"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
 "classname" "light"
 "origin" "464 -2512 128"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
 "classname" "light"
 "origin" "464 -2512 200"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
 "classname" "light"
 "origin" "464 -2512 272"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
 "classname" "light"
 "origin" "576 -2512 56"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
 "classname" "light"
 "origin" "576 -2512 128"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
 "classname" "light"
 "origin" "576 -2512 200"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
 "classname" "light"
 "origin" "576 -2512 272"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
 "classname" "light"
 "origin" "696 -2512 56"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
 "classname" "light"
 "origin" "696 -2512 128"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
 "classname" "light"
 "origin" "696 -2512 200"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
 "classname" "light"
 "origin" "696 -2512 272"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
 "classname" "light"
 "origin" "704 -2360 56"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
 "classname" "light"
 "origin" "704 -2360 128"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
 "classname" "light"
 "origin" "704 -2360 200"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
 "classname" "light"
 "origin" "704 -2360 272"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
 "classname" "light"
 "origin" "704 -2240 272"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
 "classname" "light"
 "origin" "464 -2232 272"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 {
@@ -369,6 +369,9 @@
 "classname" "func_door"
 "angle" "90]"
 "sounds" "1"
+"targetname" "e2_door"
+"spawnflags" "4"
+"wait" "-1"
 "model" "*15"
 }
 {
@@ -502,15 +505,20 @@
 "light" "500"
 }
 {
-"classname" "trigger_once"
+"classname" "trigger_multiple"
 "message" "Step into the slipgate to\nstart playing QUAKE!"
 "spawnflags" "2048"
+"targetname" "play_quake"
+"wait" "2"
 "model" "*23"
 }
 {
 "classname" "func_door"
 "angle" "-90"
 "sounds" "1"
+"targetname" "e2_door"
+"spawnflags" "4"
+"wait" "-1"
 "model" "*24"
 }
 {
@@ -523,6 +531,7 @@
 "angle" "-1"
 "sounds" "3"
 "wait" "-1"
+"targetname" "e4_door"
 "model" "*26"
 }
 {
@@ -757,7 +766,7 @@
 }
 {
 "classname" "trigger_changelevel"
-"map" "e3m1"
+"map" "e3m1_roj"
 "spawnflags" "1"
 "model" "*42"
 }
@@ -869,6 +878,8 @@
 "classname" "func_door"
 "angle" "-1"
 "sounds" "3"
+"targetname" "e3_door"
+"wait" "-1"
 "model" "*46"
 }
 {
@@ -929,4 +940,29 @@
 "classname" "info_player_deathmatch"
 "origin" "-32 -2760 -8"
 "angle" "90"
+}
+{
+"classname" "trigger_onlyregistered"
+"message" "This is the shareware episode.\nLike it? Buy the rest."
+"spawnflags" "2048"
+"target" "play_quake"
+"model" "*47"
+}
+{
+"classname" "trigger_onlyregistered"
+"target" "e2_door"
+"message" "This episode is only available\nin the registered version.\n\nCall 1-800-this-number-probably-doesn't-\nexist-anymore to get the rest!"
+"model" "*48"
+}
+{
+"classname" "trigger_onlyregistered"
+"target" "e3_door"
+"message" "This episode is only available\nin the registered version.\n\nCall 1-800-this-number-probably-doesn't-\nexist-anymore to get the rest!"
+"model" "*49"
+}
+{
+"classname" "trigger_onlyregistered"
+"target" "e4_door"
+"message" "This episode is only available\nin the registered version.\n\nCall 1-800-this-number-probably-doesn't-\nexist-anymore to get the rest!"
+"model" "*50"
 }
