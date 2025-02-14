@@ -24,7 +24,7 @@
 </table>
 </div>
 <script>
-fetch("data.json").then(res => res.json()).then(json => {
+fetch("data.json", {cache: "no-store"}).then(res => res.json()).then(json => {
 	let totalMaps = json.length;
 	let elements = [];
 	let claimedCount = json.reduce((acc, next) => next.user ? acc +1 : acc, 0);
