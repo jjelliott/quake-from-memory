@@ -55,8 +55,8 @@
     },
     {
         "map": "e2m1",
-        "user": "JoyModulo",
-        "claimedOn": "2025-01-29",
+        "user": null,
+        "claimedOn": null,
         "complete": false
     },
     {
@@ -157,9 +157,9 @@
     },
     {
         "map": "e4m4",
-        "user": null,
-        "claimedOn": null,
-        "complete": false
+        "user": "Text_Fish",
+        "claimedOn": "2025-02-19",
+        "complete": true
     },
     {
         "map": "e4m5",
@@ -181,8 +181,8 @@
     },
     {
         "map": "e4m8",
-        "user": null,
-        "claimedOn": null,
+        "user": "~rj",
+        "claimedOn": "2025-02-18",
         "complete": false
     },
     {
