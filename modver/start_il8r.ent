@@ -657,7 +657,7 @@
 }
 {
 "classname" "trigger_changelevel"
-"map" "end"
+"map" "end_chuma"
 "spawnflags" "1"
 "model" "*35"
 }
