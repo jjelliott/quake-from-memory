@@ -55,8 +55,8 @@
     },
     {
         "map": "e2m1",
-        "user": null,
-        "claimedOn": null,
+        "user": "erysdren",
+        "claimedOn": "2025-03-02",
         "complete": false
     },
     {
@@ -69,7 +69,7 @@
         "map": "e2m3",
         "user": "RecycledOJ",
         "claimedOn": "2025-02-09",
-        "complete": false
+        "complete": true
     },
     {
         "map": "e2m4",
@@ -121,8 +121,8 @@
     },
     {
         "map": "e3m5",
-        "user": null,
-        "claimedOn": null,
+        "user": "RecycledOJ",
+        "claimedOn": "2025-03-02",
         "complete": false
     },
     {
