@@ -5,8 +5,7 @@
 "mapversion" "220"
 "wad" "jr_med.wad;start.wad;base.wad;medieval.wad;wizard.wad;metal.wad;C:/Users/Jesse/mapping/wads/fn-tex.wad"
 "classname" "worldspawn"
-"_tb_mod" "from-memory"
-"_tb_textures" "textures\base.wad;textures\e2m4.wad;textures\fn-tex.wad;textures\jr_med.wad;textures\medieval.wad;textures\metal.wad;textures\start.wad;textures\wizard.wad"
+"_tb_textures" "base.wad;fn-tex.wad;jr_med.wad;medieval.wad;metal.wad;start.wad;textures\base.wad;textures\e2m4.wad;textures\fn-tex.wad;textures\jr_med.wad;textures\medieval.wad;textures\metal.wad;textures\start.wad;textures\wizard.wad;wizard.wad"
 "_sunlight2" "75"
 "_bounce" "1"
 "_dirt" "1"
@@ -15,6 +14,7 @@
 "_gamma" "1.25"
 "sounds" "4"
 "message" "me: can I have start.bsp\nmom: we have start.bsp at home\nstart.bsp at home:"
+"_tb_mod" "memjam"
 // brush 0
 {
 ( -256 -128 -32 ) ( -192 -192 -16 ) ( -192 -192 -32 ) city4_7 [ 0.7071067811865476 -0.7071067811865476 0 -45.254833 ] [ 0 0 -1 0 ] 0 1 1
@@ -7844,154 +7844,154 @@
 {
 "classname" "light"
 "origin" "464 -2352 56"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 45
 {
 "classname" "light"
 "origin" "464 -2352 128"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 46
 {
 "classname" "light"
 "origin" "464 -2352 200"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 47
 {
 "classname" "light"
 "origin" "464 -2352 272"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 48
 {
 "classname" "light"
 "origin" "464 -2512 56"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 49
 {
 "classname" "light"
 "origin" "464 -2512 128"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 50
 {
 "classname" "light"
 "origin" "464 -2512 200"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 51
 {
 "classname" "light"
 "origin" "464 -2512 272"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 52
 {
 "classname" "light"
 "origin" "576 -2512 56"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 53
 {
 "classname" "light"
 "origin" "576 -2512 128"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 54
 {
 "classname" "light"
 "origin" "576 -2512 200"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 55
 {
 "classname" "light"
 "origin" "576 -2512 272"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 56
 {
 "classname" "light"
 "origin" "696 -2512 56"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 57
 {
 "classname" "light"
 "origin" "696 -2512 128"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 58
 {
 "classname" "light"
 "origin" "696 -2512 200"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 59
 {
 "classname" "light"
 "origin" "696 -2512 272"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 60
 {
 "classname" "light"
 "origin" "704 -2360 56"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 61
 {
 "classname" "light"
 "origin" "704 -2360 128"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 62
 {
 "classname" "light"
 "origin" "704 -2360 200"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 63
 {
 "classname" "light"
 "origin" "704 -2360 272"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 64
 {
 "classname" "light"
 "origin" "704 -2240 272"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 65
 {
 "classname" "light"
 "origin" "464 -2232 272"
-"light" "50"
+"light" "25"
 "delay" "5"
 }
 // entity 66
@@ -8419,6 +8419,9 @@
 "classname" "func_door"
 "angle" "90]"
 "sounds" "1"
+"targetname" "e2_door"
+"spawnflags" "4"
+"wait" "-1"
 // brush 0
 {
 ( 632 -2944 56 ) ( 632 -2943 56 ) ( 632 -2944 57 ) door05_2 [ 0 -1 0 96 ] [ -0 -0 -1 64 ] 0 1 1
@@ -8930,9 +8933,11 @@
 }
 // entity 99
 {
-"classname" "trigger_once"
+"classname" "trigger_multiple"
 "message" "Step into the slipgate to\nstart playing QUAKE!"
 "spawnflags" "2048"
+"targetname" "play_quake"
+"wait" "2"
 // brush 0
 {
 ( 456 -2544 48 ) ( 456 -2543 48 ) ( 456 -2544 49 ) trigger [ 0 -1 0 48 ] [ 0 0 -1 0 ] 0 1 1
@@ -8949,6 +8954,9 @@
 "classname" "func_door"
 "angle" "-90"
 "sounds" "1"
+"targetname" "e2_door"
+"spawnflags" "4"
+"wait" "-1"
 // brush 0
 {
 ( 632 -2944 56 ) ( 632 -2943 56 ) ( 632 -2944 57 ) door05_2 [ 0 -1 0 96 ] [ -0 -0 -1 64 ] 0 1 1
@@ -8979,6 +8987,7 @@
 "angle" "-1"
 "sounds" "3"
 "wait" "-1"
+"targetname" "e4_door"
 // brush 0
 {
 ( -1304 -2416 -528 ) ( -1312 -2408 -528 ) ( -1312 -2408 -400 ) cop1_2 [ 0.7071067811865476 -0.7071067811865476 0 0 ] [ 0 0 -1 0 ] 0 1 1
@@ -11411,6 +11420,8 @@
 "classname" "func_door"
 "angle" "-1"
 "sounds" "3"
+"targetname" "e3_door"
+"wait" "-1"
 // brush 0
 {
 ( -1016 -3120 192 ) ( -1016 -3119 192 ) ( -1016 -3120 193 ) wmet4_5 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
@@ -11635,4 +11646,99 @@
 "classname" "info_player_deathmatch"
 "origin" "-32 -2760 -8"
 "angle" "90"
+}
+// entity 211
+{
+"classname" "trigger_onlyregistered"
+"message" "This is the shareware episode.\nLike it? Buy the rest."
+"spawnflags" "2048"
+"target" "play_quake"
+// brush 0
+{
+( 456 -2544 48 ) ( 456 -2543 48 ) ( 456 -2544 49 ) trigger [ 0 -1 0 48 ] [ 0 0 -1 0 ] 0 1 1
+( 456 -2352 56 ) ( 464 -2360 184 ) ( 464 -2360 56 ) trigger [ 0.7071067811865476 -0.7071067811865476 0 -5.6567383 ] [ 0 0 -1 0 ] 0 1 1
+( 456 -2544 48 ) ( 456 -2544 49 ) ( 457 -2544 48 ) trigger [ 1 0 0 -56 ] [ 0 0 -1 0 ] 0 1 1
+( 456 -2544 48 ) ( 457 -2544 48 ) ( 456 -2543 48 ) trigger [ -1 0 0 55.99997 ] [ 0 -1 0 48 ] 0 1 1
+( 712 -2344 144 ) ( 712 -2343 144 ) ( 713 -2344 144 ) trigger [ 1 0 0 -55.99997 ] [ 0 -1 0 48 ] 0 1 1
+( 712 -2344 56 ) ( 713 -2344 56 ) ( 712 -2344 57 ) trigger [ -1 0 0 56 ] [ 0 0 -1 0 ] 0 1 1
+( 464 -2344 56 ) ( 472 -2352 56 ) ( 472 -2352 184 ) trigger [ -0.7071067811865476 0.7071067811865476 0 5.6569824 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 212
+{
+"classname" "trigger_onlyregistered"
+"target" "e2_door"
+"message" "This episode is only available\nin the registered version.\n\nCall 1-800-this-number-probably-doesn't-\nexist-anymore to get the rest!"
+// brush 0
+{
+( 608 -3104 64 ) ( 608 -3103 64 ) ( 608 -3104 65 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 608 -3104 64 ) ( 608 -3104 65 ) ( 609 -3104 64 ) trigger [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 608 -3104 64 ) ( 609 -3104 64 ) ( 608 -3103 64 ) trigger [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 656 -3088 192 ) ( 656 -3087 192 ) ( 657 -3088 192 ) trigger [ 1 0 0 0 ] [ 0 -1 0 0 ] 180 1 1
+( 656 -2976 80 ) ( 657 -2976 80 ) ( 656 -2976 81 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 270 1 1
+( 672 -3088 80 ) ( 672 -3088 81 ) ( 672 -3087 80 ) trigger [ 0 1 0 0 ] [ 0 0 -1 0 ] 270 1 1
+}
+}
+// entity 213
+{
+"classname" "trigger_onlyregistered"
+"target" "e3_door"
+"message" "This episode is only available\nin the registered version.\n\nCall 1-800-this-number-probably-doesn't-\nexist-anymore to get the rest!"
+// brush 0
+{
+( -1040 -3104 64 ) ( -1040 -3103 64 ) ( -1040 -3104 65 ) trigger [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -1024 -3104 64 ) ( -1024 -3104 65 ) ( -1023 -3104 64 ) trigger [ 1 0 0 32 ] [ 0 0 -1 0 ] 90 1 1
+( -1024 -3104 64 ) ( -1023 -3104 64 ) ( -1024 -3103 64 ) trigger [ -1 0 0 -32 ] [ 0 -1 0 0 ] 90 1 1
+( -976 -3088 192 ) ( -976 -3087 192 ) ( -975 -3088 192 ) trigger [ 1 0 0 32 ] [ 0 -1 0 0 ] 270 1 1
+( -976 -2976 80 ) ( -975 -2976 80 ) ( -976 -2976 81 ) trigger [ -1 0 0 -32 ] [ 0 0 -1 0 ] 0 1 1
+( -960 -3088 80 ) ( -960 -3088 81 ) ( -960 -3087 80 ) trigger [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 214
+{
+"classname" "trigger_onlyregistered"
+"target" "e4_door"
+"message" "This episode is only available\nin the registered version.\n\nCall 1-800-this-number-probably-doesn't-\nexist-anymore to get the rest!"
+// brush 0
+{
+( -1344 -2544 -536 ) ( -1344 -2543 -536 ) ( -1344 -2544 -535 ) trigger [ 0 -1 0 48 ] [ 0 0 -1 -24 ] 180 1 1
+( -1328 -2656 -536 ) ( -1328 -2656 -535 ) ( -1327 -2656 -536 ) trigger [ 1 0 0 16 ] [ 0 0 -1 -24 ] 90 1 1
+( -1328 -2544 -536 ) ( -1327 -2544 -536 ) ( -1328 -2543 -536 ) trigger [ -1 0 0 -16 ] [ 0 -1 0 48 ] 270 1 1
+( -1280 -2528 -408 ) ( -1280 -2527 -408 ) ( -1279 -2528 -408 ) trigger [ 1 0 0 16 ] [ 0 -1 0 48 ] 90 1 1
+( -1280 -2384 -520 ) ( -1279 -2384 -520 ) ( -1280 -2384 -519 ) trigger [ -1 0 0 -16 ] [ 0 0 -1 -24 ] 90 1 1
+( -1264 -2528 -520 ) ( -1264 -2528 -519 ) ( -1264 -2527 -520 ) trigger [ 0 1 0 -48 ] [ 0 0 -1 -24 ] 180 1 1
+}
+}
+// entity 215
+{
+"classname" "func_wall"
+"spawnflags" "1792"
+"targetname" "pit_cover"
+// brush 0
+{
+( 1144 -2760 -512 ) ( 1144 -2600 -528 ) ( 1144 -2600 -512 ) tlight08 [ 0 -1 0 0 ] [ 0 -0 -1 0 ] 0 1 1
+( 1208 -2824 -512 ) ( 1144 -2760 -528 ) ( 1144 -2760 -512 ) tlight08 [ 0.7071067811865476 -0.7071067811865476 0 0 ] [ 0 -0 -1 0 ] 0 1 1
+( 1208 -2536 -512 ) ( 1144 -2600 -528 ) ( 1208 -2536 -528 ) tlight08 [ -0.7071067811865476 -0.7071067811865476 0 0 ] [ -0 0 -1 0 ] 0 1 1
+( 1368 -2824 -512 ) ( 1208 -2824 -528 ) ( 1208 -2824 -512 ) tlight08 [ 1 0 -0 0 ] [ 0 -0 -1 0 ] 0 1 1
+( 1432 -2600 -528 ) ( 1368 -2824 -528 ) ( 1432 -2760 -528 ) tlight08 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1432 -2600 -512 ) ( 1208 -2536 -512 ) ( 1368 -2536 -512 ) tlight08 [ 1 0 0 0 ] [ 0 -1 0 0 ] 270 1 1
+( 1368 -2536 -512 ) ( 1208 -2536 -528 ) ( 1368 -2536 -528 ) tlight08 [ -1 0 0 0 ] [ -0 0 -1 0 ] 0 1 1
+( 1432 -2760 -512 ) ( 1368 -2824 -528 ) ( 1368 -2824 -512 ) tlight08 [ 0.7071067811865476 0.7071067811865476 -0 0 ] [ 0 -0 -1 0 ] 0 1 1
+( 1432 -2600 -512 ) ( 1368 -2536 -528 ) ( 1432 -2600 -528 ) tlight08 [ -0.7071067811865476 0.7071067811865476 0 0 ] [ -0 0 -1 0 ] 0 1 1
+( 1432 -2600 -512 ) ( 1432 -2760 -528 ) ( 1432 -2760 -512 ) tlight08 [ 0 1 -0 0 ] [ 0 -0 -1 0 ] 0 1 1
+}
+}
+// entity 216
+{
+"classname" "trigger_onlyregistered"
+"killtarget" "pit_cover"
+// brush 0
+{
+( 96 -3184 -320 ) ( 96 -3183 -320 ) ( 96 -3184 -319 ) __TB_empty [ 0 -1 0 0 ] [ 0 0 -1 0 ] 270 1 1
+( 176 -3184 -320 ) ( 176 -3184 -319 ) ( 177 -3184 -320 ) __TB_empty [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 176 -3184 -320 ) ( 177 -3184 -320 ) ( 176 -3183 -320 ) __TB_empty [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 192 -3088 -208 ) ( 192 -3087 -208 ) ( 193 -3088 -208 ) __TB_empty [ 1 0 0 0 ] [ 0 -1 0 0 ] 270 1 1
+( 192 -3088 -304 ) ( 193 -3088 -304 ) ( 192 -3088 -303 ) __TB_empty [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 192 -3088 -304 ) ( 192 -3088 -303 ) ( 192 -3087 -304 ) __TB_empty [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
 }
