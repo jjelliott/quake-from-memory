@@ -79,8 +79,8 @@
     },
     {
         "map": "e2m5",
-        "user": "liquidfae",
-        "claimedOn": "2024-12-28",
+        "user": null,
+        "claimedOn": null,
         "complete": false
     },
     {
@@ -123,7 +123,7 @@
         "map": "e3m5",
         "user": "RecycledOJ",
         "claimedOn": "2025-03-02",
-        "complete": false
+        "complete": true
     },
     {
         "map": "e3m6",
@@ -171,7 +171,7 @@
         "map": "e4m6",
         "user": "Chuma + NewHouse",
         "claimedOn": null,
-        "complete": false
+        "complete": true
     },
     {
         "map": "e4m7",
