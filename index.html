@@ -41,7 +41,7 @@ fetch("data.json", {cache: "no-store"}).then(res => res.json()).then(json => {
 	document.querySelector("#stats").innerHTML = `<h2>Overall counts</h2><p><b>Claimed:</b> ${claimedCount} / ${totalMaps}</p><p><b>Finished:</b> ${finishedCount} / ${claimedCount}</p>`;
 	document.querySelector("tbody").innerHTML = elements.reduce((acc, next) => acc + next, "");
 });
-	document.querySelector("input").addEventListener("click", (e) -> {
+	document.querySelector("input").addEventListener("click", (e) => {
 		let cssClass = e.target.id;
 		if (e.target.checked){
 			[...document.querySelector(`.${cssClass}`)].forEach(el -> el.classList.remove("d-none");
