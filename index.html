@@ -35,20 +35,20 @@ fetch("data.json", {cache: "no-store"}).then(res => res.json()).then(json => {
 	let claimedCount = json.reduce((acc, next) => next.user ? acc +1 : acc, 0);
 	let finishedCount = json.reduce((acc, next) => next.complete ? acc +1 : acc, 0);
 	json.forEach(row => {
-        let tableRow = `<tr class="${row.user ? (row.complete ? "incomplete": "complete") :"unclaimed"  }"><td>${row.map}</td><td>${row.user || "Unclaimed"}</td><td>${row.claimedOn || ""}</td><td>${row.complete ? "Yes" : "No"}</td></tr>`;
+        let tableRow = `<tr class="${row.user ? (row.complete ? "complete": "incomplete") :"unclaimed"  }"><td>${row.map}</td><td>${row.user || "Unclaimed"}</td><td>${row.claimedOn || ""}</td><td>${row.complete ? "Yes" : "No"}</td></tr>`;
         elements.push( tableRow);
 	})
 	document.querySelector("#stats").innerHTML = `<h2>Overall counts</h2><p><b>Claimed:</b> ${claimedCount} / ${totalMaps}</p><p><b>Finished:</b> ${finishedCount} / ${claimedCount}</p>`;
 	document.querySelector("tbody").innerHTML = elements.reduce((acc, next) => acc + next, "");
 });
-	document.querySelector("input").addEventListener("click", (e) => {
+	document.querySelectorAll("input").forEach(input => input.addEventListener("click", (e) => {
 		let cssClass = e.target.id;
 		if (e.target.checked){
-			[...document.querySelector(`.${cssClass}`)].forEach(el => {if (el.classList.contains("d-none")) el.classList.remove("d-none")});
+			document.querySelectorAll(`.${cssClass}`).forEach(el => {if (el.classList.contains("d-none")) el.classList.remove("d-none")});
 		} else {
-			[...document.querySelector(`.${cssClass}`)].forEach(el => el.classList.add("d-none"));
+			document.querySelectorAll(`.${cssClass}`).forEach(el => el.classList.add("d-none"));
 		}
-	});
+	}));
 </script>
 </body>
 
