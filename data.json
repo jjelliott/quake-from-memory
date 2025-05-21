@@ -81,7 +81,7 @@
         "map": "e2m5",
         "user": "Chuma + NewHouse",
         "claimedOn": null,
-        "complete": false
+        "complete": true
     },
     {
         "map": "e2m6",
@@ -117,7 +117,7 @@
         "map": "e3m4",
         "user": "wiedo",
         "claimedOn": null,
-        "complete": false
+        "complete": true
     },
     {
         "map": "e3m5",
