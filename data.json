@@ -57,7 +57,7 @@
         "map": "e2m1",
         "user": "Laurar + niccolicious",
         "claimedOn": null,
-        "complete": false
+        "complete": true
     },
     {
         "map": "e2m2",
@@ -135,7 +135,7 @@
         "map": "e3m7",
         "user": "NewHouse + ~rj",
         "claimedOn": null,
-        "complete": false
+        "complete": true
     },
     {
         "map": "e4m1",
