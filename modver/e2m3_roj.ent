@@ -443,7 +443,7 @@
 }
 {
 "classname" "trigger_changelevel"
-"map" "e2m7"
+"map" "e2m7_text_fish"
 "spawnflags" "2048"
 "model" "*22"
 }
@@ -900,7 +900,7 @@
 }
 {
 "classname" "trigger_changelevel"
-"map" "e2m4"
+"map" "e2m4_niccolicious"
 "model" "*38"
 }
 {

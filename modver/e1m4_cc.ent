@@ -455,7 +455,7 @@
 }
 {
 "classname" "trigger_changelevel"
-"map" "e1m8"
+"map" "e1m8_gnemeth"
 "model" "*19"
 }
 {

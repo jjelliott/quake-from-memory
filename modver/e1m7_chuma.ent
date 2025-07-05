@@ -402,7 +402,7 @@
 "classname" "trigger_changelevel"
 "target" "confetti"
 "spawnflags" "2048"
-"map" "start"
+"map" "start_il8r"
 "model" "*31"
 }
 {

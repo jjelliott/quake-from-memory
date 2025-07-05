@@ -1858,7 +1858,7 @@
 }
 {
 "classname" "trigger_changelevel"
-"map" "e1m5"
+"map" "e1m5_raton"
 "model" "*24"
 "name" "trigger_changelevel_0"
 }
