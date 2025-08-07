@@ -7,7 +7,7 @@ We tried to answer that question.
 
 ------------------------------------------
 
-Jam started December 28th, 2024 and concluded February 9th, 2025.
+Jam started December 28th, 2024 and concluded with a "shareware" release February 9th, 2025. Work on the remainder of the game continued through August of 2025.
 
 Progs included are id1 bugfix, so you should be able to play the maps with any desired gameplay mod.
 
@@ -78,4 +78,5 @@ Opaque liquids (use -notranswater on qbsp and set _wateralpha 1 on worldspawn)
 No colored lights
 No fog
 -splitturb 0 on qbsp
+
 Reference if you want to be told you're forgetting / fabricating something without any spoilers about what: https://www.ledmeister.com/q1counts.txt
