@@ -7,15 +7,10 @@ jobs:
   create-id1-release:
     name: Create id1 replacement release files
     runs-on: ubuntu-latest
+    container: ghcr.io/jjelliott/quake-mod-builder:main 
     steps:
     - name: Checkout
       uses: actions/checkout@v4.2.2
-    - uses: actions/setup-python@v5
-      with:
-        python-version: '3.13' 
-    - uses: BSFishy/pip-action@v1
-      with:
-        packages: quake-cli-tools
     - name: Copy files for id1 version
       run: |
         mkdir -p build/id1ver/maps
@@ -67,12 +62,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4.2.2
-    - uses: actions/setup-python@v5
-      with:
-        python-version: '3.13' 
-    - uses: BSFishy/pip-action@v1
-      with:
-        packages: quake-cli-tools
     - name: Copy files for id1 version
       run: |
         mkdir -p build/modver/maps
