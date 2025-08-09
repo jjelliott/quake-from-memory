@@ -4,8 +4,8 @@ on:
     - main
     - v*
 jobs:
-  create-release:
-    name: Create release files
+  create-id1-release:
+    name: Create id1 replacement release files
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -16,16 +16,21 @@ jobs:
     - uses: BSFishy/pip-action@v1
       with:
         packages: quake-cli-tools
-    - name: Copy files
+    - name: Copy files for id1 version
       run: |
         mkdir -p build/id1ver/maps
-        cp id1ver/* build/id1ver/maps/
+        cp maps/* build/id1ver/maps/
         cp demo* build/id1ver/
         cp quake.rc build/id1ver/
         cp progs.dat build/id1ver/
         cp qfm-jam-readme.txt build/id1ver/
         cp -r srcrdme build/id1ver/
-    - name: Make paks
+    - name: Prep map names for id1 versions
+      run: |
+        cd build/id1ver/maps
+        ../../../id1-rename.sh
+	cd ../../../
+    - name: Make id1 version paks
       run: |
         cd build/id1ver
         pak pak0.pak maps/e1* maps/start.bsp progs.dat quake.rc demo*
@@ -56,3 +61,35 @@ jobs:
     # A file, directory or wildcard pattern that describes what to upload
         path: build/id1ver/*
     # The desired behavior if no files are found using the provided path.
+  create-mod-release:
+    name: Create standalone release files
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4.2.2
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.13' 
+    - uses: BSFishy/pip-action@v1
+      with:
+        packages: quake-cli-tools
+    - name: Copy files for id1 version
+      run: |
+        mkdir -p build/modver/maps
+        cp maps/* build/modver/maps/
+        cp qfm-jam-readme.txt build/modver/
+        cp -r srcrdme build/modver/
+    - name: Prep ent files
+      run: |
+        cd build/modver/maps
+        ../../../ent-maker.js
+	cd ../../../
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4.6.0
+      with:
+    # Artifact name
+        name: qfmjam-maps-only-${{ github.ref_name }}
+    # A file, directory or wildcard pattern that describes what to upload
+        path: build/modver/*
+    # The desired behavior if no files are found using the provided path.
+
