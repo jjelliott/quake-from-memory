@@ -59,6 +59,7 @@ jobs:
   create-mod-release:
     name: Create standalone release files
     runs-on: ubuntu-latest
+    container: ghcr.io/jjelliott/quake-mod-builder:main 
     steps:
     - name: Checkout
       uses: actions/checkout@v4.2.2
