@@ -29,7 +29,7 @@ jobs:
       run: |
         cd build/id1ver/maps
         ../../../id1-rename.sh
-	cd ../../../
+        cd ../../../
     - name: Make id1 version paks
       run: |
         cd build/id1ver
@@ -83,7 +83,7 @@ jobs:
       run: |
         cd build/modver/maps
         ../../../ent-maker.js
-	cd ../../../
+        cd ../../../
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4.6.0
       with:
