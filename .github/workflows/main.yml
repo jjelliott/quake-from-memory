@@ -63,9 +63,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4.2.2
-    - uses: actions/setup-node@v4
-      with:
-        node-version: 22
     - name: Copy files for id1 version
       run: |
         mkdir -p build/modver/maps
