@@ -5,11 +5,9 @@ If somehow id1 was wiped off of all computers in the world, do we collectively r
 
 We tried to answer that question.
 
-------------------------------------------
-
 Jam started December 28th, 2024 and concluded with a "shareware" release February 9th, 2025. Work on the remainder of the game continued through August of 2025.
 
-Progs included are id1 bugfix, so you should be able to play the maps with any desired gameplay mod.
+Progs included are id1 bugfix, so you should be able to play the maps with any desired gameplay mod. Additionally, qfmjam-maps-only-v1.zip contains the maps without overriding id1 map names, so you can simply install it into any mod you desire.
 
 Tested in DOS Quake, Ironwail, and Kex (Remaster).
 
@@ -17,26 +15,44 @@ Tested in DOS Quake, Ironwail, and Kex (Remaster).
 Installation:
 ------------------------------------------
 
-Create a new folder in your Quake directory called qfmjam, copy all files into it.
+For qfmjam-v1.zip:
+Create a new folder in your Quake directory called qfmjam, copy all files into it. Launch the game with `-game qfmjam` or enter `game qfmjam` in the console on supported ports. Start the game as normal.
+
+For qfmjam-v1-maps-only:
+Extract the maps folder into your desired mod. Run `map start_il8r` to load the start map.
 
 
 Credits:
 ------------------------------------------
-iLike80sRock: Organizer, start, e3m2, e4m5
+iLike80sRock: Organizer, start, e3m2, e4m5, e4m7
 rabbit: e1m1
 Avix: e1m2
 ChadQuad: e1m3
 CommonCold: e1m4
 Raton: e1m5
 Atom1K: e1m6, e3m6
-Chuma: e1m7, end
-gnemeth: e1m8
-Niccolicious: e2m4
-Text_Fish: e2m7
-RecycledOJ: e3m1
+Chuma: e1m7, e2m5, e4m6, end
+gnemeth: e1m8, e2m2
+Niccolicious: e2m1, e2m4
+Text_Fish: e2m7, e4m4
+RecycledOJ: e2m3, e2m6, e3m1, e3m5
 ZungryWare: e4m1
 shark: e4m2
-NewHouse: e4m3
+NewHouse: e2m5, e3m3, e3m7, e4m3, e4m6, e4m7
+Dooplon: e2m6
+wiedo: e3m3, e3m4
+rj: e3m7, e4m8
+
+
+License:
+------------------------------------------
+Provided map sources CAN be used for further works, but keep in mind that these maps are based off of id Software's original maps. Any limitations that would apply to using the original map sources apply here.
+
+
+Contact:
+------------------------------------------
+@ilike80srock on Discord
+iLike80sRock on Slipseer
 
 
 Original Jam Prompt:
@@ -74,9 +90,9 @@ Include map source (Highly recommended, not required)
 Hints
 Make sure you do not use target on pickups to prevent breakages in coop, instead surround items with a trigger_once
 For an original look (not required, but recommended)
-Opaque liquids (use -notranswater on qbsp and set _wateralpha 1 on worldspawn)
-No colored lights
-No fog
+-Opaque liquids (use -notranswater on qbsp and set _wateralpha 1 on worldspawn)
+-No colored lights
+-No fog
 -splitturb 0 on qbsp
 
 Reference if you want to be told you're forgetting / fabricating something without any spoilers about what: https://www.ledmeister.com/q1counts.txt
