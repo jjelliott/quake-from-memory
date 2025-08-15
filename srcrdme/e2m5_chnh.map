@@ -9341,7 +9341,7 @@
 // entity 103
 {
 "classname" "trigger_changelevel"
-"map" "e1m6"
+"map" "e2m6"
 "spawnflags" "2048"
 // brush 0
 {
@@ -13710,7 +13710,6 @@
 {
 "classname" "trigger_once"
 "target" "ttm02"
-"targetname" ""
 "_tb_layer" "6"
 // brush 0
 {
@@ -14229,7 +14228,7 @@
 "classname" "trigger_teleport"
 "targetname" "ttm02"
 "target" "ttm02d1"
-"spawnflags" "256"
+"spawnflags" "0"
 "_tb_layer" "73"
 // brush 0
 {
@@ -14263,6 +14262,7 @@
 "origin" "384 1792 -432"
 "angle" "270"
 "targetname" "ttm02"
+"spawnflags" "256"
 "_tb_layer" "73"
 }
 // entity 514
@@ -14326,7 +14326,7 @@
 ( 768 1824 -456 ) ( 704 1760 -456 ) ( 768 1760 -456 ) trigger [ -1 0 0 0 ] [ 0 -1 0 32 ] 270 1 1
 ( 768 1824 -360 ) ( 704 1760 -360 ) ( 704 1824 -360 ) trigger [ 1 0 0 0 ] [ 0 -1 0 32 ] 270 1 1
 ( 768 1832 -360 ) ( 704 1832 -456 ) ( 768 1832 -456 ) trigger [ -1 0 0 0 ] [ 0 0 -1 0 ] 180 1 1
-( 768 1824 -360 ) ( 768 1760 -456 ) ( 768 1760 -360 ) trigger [ 0 1 0 -32 ] [ 0 0 -1 0 ] 270 1 1
+( 784 1824 -360 ) ( 784 1760 -456 ) ( 784 1760 -360 ) trigger [ 0 1 0 -32 ] [ 0 0 -1 0 ] 180 1 1
 }
 }
 // entity 519
