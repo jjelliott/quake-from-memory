@@ -3,10 +3,12 @@
 // entity 0
 {
 "mapversion" "220"
-"wad" "C:\quakemaps2\wads\QUAKE101.wad;/Volumes/T9/Trenchbroom/wads/ID/quake101.wad"
+"wad" "C:\quakemaps2\wads\QUAKE101.wad;/Volumes/T9/Trenchbroom/wads/ID/quake101.wad;C:\Users\Jesse\OneDrive\mapping\wads\QUAKE101.WAD"
 "classname" "worldspawn"
 "sounds" "07"
 "message" "Abysmal Omelette"
+"_bounce" "1"
+"_phong" "1"
 // brush 0
 {
 ( -912 -64 -16 ) ( -912 -63 -16 ) ( -912 -64 -15 ) wizwood1_5 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 90 1 1
