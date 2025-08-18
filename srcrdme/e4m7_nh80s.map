@@ -13847,7 +13847,7 @@
 // entity 439
 {
 "classname" "func_wall"
-"spawnflags" "1792"
+"spawnflags" "0"
 // brush 0
 {
 ( -192 1880 16 ) ( -192 1896 0 ) ( -192 1896 16 ) wizmet1_2 16 0 0 1 1
@@ -13897,7 +13897,7 @@
 // entity 440
 {
 "classname" "trigger_teleport"
-"spawnflags" "1792"
+"spawnflags" "0"
 "target" "exit_room_tele"
 // brush 0
 {
@@ -13913,6 +13913,7 @@
 {
 "classname" "item_artifact_super_damage"
 "origin" "-144 2120 24"
+"spawnflags" "1792"
 }
 // entity 442
 {
@@ -14082,6 +14083,7 @@
 {
 "classname" "info_teleport_destination"
 "origin" "2072 -152 112"
+"targetname" "bar_button_tele_dest"
 }
 // entity 451
 {
@@ -14257,4 +14259,28 @@
 {
 "classname" "light"
 "origin" "-64 -448 -168"
+}
+// entity 473
+{
+"classname" "info_intermission"
+"origin" "240 -746 9"
+"mangle" "22 131 0"
+}
+// entity 474
+{
+"classname" "info_intermission"
+"origin" "1537 -911 41"
+"mangle" "26 143 0"
+}
+// entity 475
+{
+"classname" "info_intermission"
+"origin" "973 -83 -261"
+"mangle" "-15 78 0"
+}
+// entity 476
+{
+"classname" "info_intermission"
+"origin" "-2812 -298 130"
+"mangle" "17 318 0"
 }
