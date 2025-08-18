@@ -1,4 +1,10 @@
-Quake From Memory (or, id1 cursed edition)
+   ___              _          _____                      __  __                                 
+  / _ \ _   _  __ _| | _____  |  ___| __ ___  _ __ ___   |  \/  | ___ _ __ ___   ___  _ __ _   _ 
+ | | | | | | |/ _` | |/ / _ \ | |_ | '__/ _ \| '_ ` _ \  | |\/| |/ _ \ '_ ` _ \ / _ \| '__| | | |
+ | |_| | |_| | (_| |   <  __/ |  _|| | | (_) | | | | | | | |  | |  __/ | | | | | (_) | |  | |_| |
+  \__\_\\__,_|\__,_|_|\_\___| |_|  |_|  \___/|_| |_| |_| |_|  |_|\___|_| |_| |_|\___/|_|   \__, |
+                                                                                           |___/ 
+(or, id1 cursed edition)
 ------------------------------------------
 
 If somehow id1 was wiped off of all computers in the world, do we collectively remember the maps well enough to recreate them?
@@ -47,6 +53,13 @@ rj: e3m7, e4m8
 License:
 ------------------------------------------
 Provided map sources CAN be used for further works, but keep in mind that these maps are based off of id Software's original maps. Any limitations that would apply to using the original map sources apply here.
+
+
+Known issues:
+------------------------------------------
+e4m4: Zombies in one of the traps can be squished and become unhittable by anything but splash damage. This is an id1 bug I'm not sure how to fix.
+DOS Specific: e2m3 has greyflash in one specific area
+DOS Specific: e2m6 requires -heapsize 16000 or larger
 
 
 Contact:
