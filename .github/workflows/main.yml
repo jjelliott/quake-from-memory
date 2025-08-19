@@ -20,6 +20,8 @@ jobs:
         cp progs.dat build/id1ver/
         cp qfm-jam-readme.txt build/id1ver/
         cp -r srcrdme build/id1ver/
+        mkdir -p build/id1ver/optional
+        cp optional/e2m5.ent build/id1ver/optional/e2m5.ent
     - name: Prep map names for id1 versions
       run: |
         cd build/id1ver/maps
@@ -45,6 +47,7 @@ jobs:
         path: |
           build/id1ver/pak0.pak
           build/id1ver/srcrdme/
+          build/id1ver/optional
           build/id1ver/qfm-jam-readme.txt
     # The desired behavior if no files are found using the provided path.
 
@@ -68,7 +71,9 @@ jobs:
         mkdir -p build/modver/maps
         cp maps/* build/modver/maps/
         cp qfm-jam-readme.txt build/modver/
-        cp -r srcrdme build/modver/
+        cp -r srcrdme build/modver/        
+        mkdir -p build/id1ver/optional
+        cp optional/e2m5_chnh.ent build/id1ver/optional/e2m5_chnh.ent
     - name: Prep ent files
       run: |
         cd build/modver/maps
