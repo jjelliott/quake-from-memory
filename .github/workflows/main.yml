@@ -42,7 +42,7 @@ jobs:
       uses: actions/upload-artifact@v4.6.0
       with:
     # Artifact name
-        name: qfmjam-${{ github.sha }}-shareware
+        name: qfm-${{ github.sha }}-shareware
     # A file, directory or wildcard pattern that describes what to upload
         path: |
           build/id1ver/pak0.pak
@@ -54,7 +54,7 @@ jobs:
       uses: actions/upload-artifact@v4.6.0
       with:
     # Artifact name
-        name: qfmjam-${{ github.sha }}
+        name: qfm-${{ github.sha }}
     # A file, directory or wildcard pattern that describes what to upload
         path: build/id1ver/*
     # The desired behavior if no files are found using the provided path.
@@ -82,7 +82,7 @@ jobs:
       uses: actions/upload-artifact@v4.6.0
       with:
     # Artifact name
-        name: qfmjam-maps-only-${{ github.sha }}
+        name: qfm-maps-only-${{ github.sha }}
     # A file, directory or wildcard pattern that describes what to upload
         path: build/modver/*
     # The desired behavior if no files are found using the provided path.
