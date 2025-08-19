@@ -72,7 +72,7 @@ jobs:
         cp qfm-jam-readme.txt build/modver/
         cp -r srcrdme build/modver/        
         mkdir -p build/modver/optional
-        cp optional/e2m5_chnh.ent build/id1ver/optional/e2m5_chnh.ent
+        cp optional/e2m5_chnh.ent build/modver/optional/e2m5_chnh.ent
     - name: Prep ent files
       run: |
         cd build/modver/maps
