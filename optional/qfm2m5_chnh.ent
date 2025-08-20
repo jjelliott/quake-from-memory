@@ -515,7 +515,7 @@
 }
 {
 "classname" "trigger_changelevel"
-"map" "e2m10_doop_roj"
+"map" "qfm2m10_doop_roj"
 "spawnflags" "2048"
 "model" "*23"
 }
