@@ -4,22 +4,86 @@ on:
     - main
     - v*
 jobs:
-  create-release:
-    name: Create release files
+  create-id1-release:
+    name: Create id1 replacement release files
     runs-on: ubuntu-latest
+    container: ghcr.io/jjelliott/quake-mod-builder:main 
     steps:
-    - name: Copy files
+    - name: Checkout
+      uses: actions/checkout@v4.2.2
+    - name: Copy files for id1 version
       run: |
         mkdir -p build/id1ver/maps
-        cp id1ver/* build/id1ver/maps/
+        cp maps/* build/id1ver/maps/
+        cp demo* build/id1ver/
+        cp quake.rc build/id1ver/
         cp progs.dat build/id1ver/
-        cp qfm-jam-readme.txt build/id1ver/
+        cp qfm-readme.txt build/id1ver/
         cp -r srcrdme build/id1ver/
+        mkdir -p build/id1ver/optional
+        cp optional/e2m5.ent build/id1ver/optional/e2m5.ent
+    - name: Prep map names for id1 versions
+      run: |
+        cd build/id1ver/maps
+        ../../../id1-rename.sh
+        cd ../../../
+    - name: Make id1 version paks
+      run: |
+        cd build/id1ver
+        pak pak0.pak maps/e1* maps/start.bsp progs.dat quake.rc demo*
+        sed -i.bak '/scratch4 1/d' ./quake.rc
+        pak pak1.pak maps/e2* maps/e3* maps/e4* maps/end.bsp quake.rc
+        rm quake.rc
+        rm quake.rc.bak
+        rm demo*
+        rm -r maps/
+        rm progs.dat
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4.6.0
       with:
     # Artifact name
-        name: qfmjam-${{ github.ref_name }}
+        name: qfm-${{ github.sha }}-shareware
+    # A file, directory or wildcard pattern that describes what to upload
+        path: |
+          build/id1ver/pak0.pak
+          build/id1ver/srcrdme/
+          build/id1ver/qfm-readme.txt
+    # The desired behavior if no files are found using the provided path.
+
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4.6.0
+      with:
+    # Artifact name
+        name: qfm-${{ github.sha }}
     # A file, directory or wildcard pattern that describes what to upload
         path: build/id1ver/*
     # The desired behavior if no files are found using the provided path.
+  create-mod-release:
+    name: Create standalone release files
+    runs-on: ubuntu-latest
+    container: ghcr.io/jjelliott/quake-mod-builder:main 
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4.2.2
+    - name: Copy files for id1 version
+      run: |
+        mkdir -p build/modver/maps
+        cp maps/* build/modver/maps/
+        cp qfm-readme.txt build/modver/
+        cp -r srcrdme build/modver/        
+        mkdir -p build/modver/optional
+        cp optional/qfm2m5_chnh.ent build/modver/optional/qfm2m5_chnh.ent
+    - name: Prep ent files
+      run: |
+        cd build/modver/maps
+        ../../../ent-maker.js
+        cd ../../../
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4.6.0
+      with:
+    # Artifact name
+        name: qfm-maps-only-${{ github.sha }}
+    # A file, directory or wildcard pattern that describes what to upload
+        path: build/modver/*
+    # The desired behavior if no files are found using the provided path.
+
