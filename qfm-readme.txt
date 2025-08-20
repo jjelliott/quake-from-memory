@@ -16,7 +16,7 @@ Jam started December 28th, 2024 and concluded with a "shareware" release Februar
 The mod comes in 2 flavors: 
 
   - qfm-v1.zip: This version replaces all id1 maps with their from-memory counterparts. Included is a bugfixed id1 progs, so no fish bug here! 
-  - qfm-v1-maps-only.zip: This version includes all of the maps named with their author names, like `start_il8r`. These can be loaded into any mod and played without overriding anything.
+  - qfm-v1-maps-only.zip: This version includes all of the maps renamed to `qfmXmY_author`. These can be loaded into any mod (even id1) and played without overriding anything.
 
 Tested in DOS Quake, Ironwail, and Kex (Remaster).
 
@@ -26,13 +26,13 @@ Due to some last minute technical difficulties, we have 2 versions of e2m6 - jus
 Installation:
 ------------------------------------------
 
-For qfmjam-v1.zip:
-Create a new folder in your Quake directory called qfmjam, copy all files into it. Launch the game with `-game qfmjam` or enter `game qfmjam` in the console on supported ports. Start the game as normal.
+For qfm-v1.zip:
+Create a new folder in your Quake directory called qfm, copy all files into it. Launch the game with `-game qfm` or enter `game qfm` in the console on supported ports. Start the game as normal.
 
-For qfmjam-v1-maps-only:
-Extract the maps folder into your desired mod. Run `map start_il8r` to load the start map.
+For qfm-v1-maps-only:
+Extract the maps folder into your desired mod. Run `map qfmstart_il8r` to load the start map.
 
-OPTIONAL: To use the optional extended version of e2m6 within the episode, copy the .ent file in the "optional" directory into the appropriate "maps" directory for the mod. It'll change e2m5 to exit to e2m10 instead of e2m6.
+OPTIONAL: To use the optional extended version of e2m6 within the episode, copy the .ent file in the "optional" directory into the appropriate "maps" directory for the mod. It'll change e2m5 to exit to e2m10 instead of e2m6. You can (and should) play e2m10 with shotgun start either way!
 
 
 Credits:
